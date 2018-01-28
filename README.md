@@ -80,6 +80,8 @@ version regardless of tag.
 
 Don't seem to be able to verify against versions.
 
+In the real world these would be in separate repositories and pacts would be published and verified on the CI server.
+
 Thanks to 'The Creative Tester' as this is heavily based on their work:
 - http://the-creative-tester.github.io/Java-Consumer-Driven-Contract-Testing/
 - https://github.com/the-creative-tester/consumer-driven-contract-testing-example
