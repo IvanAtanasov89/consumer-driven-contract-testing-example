@@ -15,8 +15,8 @@ public class Configuration
 
     public static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-    public static final String DUMMY_PROVIDER = "dummy-provider";
-    public static final String DUMMY_CONSUMER = "dummy-consumer";
+    public static final String DUMMY_PROVIDER = "provider";
+    public static final String DUMMY_CONSUMER = "consumer";
 
     public static String getDateToday()
     {
