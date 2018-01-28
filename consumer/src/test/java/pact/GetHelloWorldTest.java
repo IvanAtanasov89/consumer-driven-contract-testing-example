@@ -10,15 +10,13 @@ import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 
-public class GetHelloWorldTest
-{
+public class GetHelloWorldTest {
     @Rule
     public PactRule rule = new PactRule(Configuration.MOCK_HOST, Configuration.MOCK_HOST_PORT, this);
     private DslPart helloWorldResults;
 
     @Pact(state = "HELLO WORLD", provider = Configuration.DUMMY_PROVIDER, consumer = Configuration.DUMMY_CONSUMER)
-    public PactFragment createFragment(ConsumerPactBuilder.PactDslWithProvider.PactDslWithState builder)
-    {
+    public PactFragment createFragment(ConsumerPactBuilder.PactDslWithProvider.PactDslWithState builder) {
         helloWorldResults = new PactDslJsonBody()
                 .id()
                 .stringType("content")
@@ -37,8 +35,7 @@ public class GetHelloWorldTest
 
     @Test
     @PactVerification("HELLO WORLD")
-    public void shouldGetHelloWorld() throws IOException
-    {
+    public void shouldGetHelloWorld() throws IOException {
         DummyConsumer restClient = new DummyConsumer(Configuration.SERVICE_URL);
         assertEquals(helloWorldResults.toString(), restClient.getHelloWorld());
     }
